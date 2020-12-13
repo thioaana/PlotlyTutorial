@@ -29,7 +29,7 @@ app.layout = html.Div([dcc.Graph(id='basic-interactions',
                                                    className='three columns'),
                                           html.Div([dcc.Markdown("""**Click Data**Click on points in the graph."""),
                                                     html.Pre(id='click-data', style=styles['pre']),],
-                                                   className='three columns'),
+                     2                              className='three columns'),
                                           html.Div([dcc.Markdown("""**Selection Data**Choose the lasso or rectangle tool
                                                                 in the graph's menu bar and then select points in the graph.
                                                                 Note that if `layout.clickmode = 'event+select'`, selection data also
