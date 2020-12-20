@@ -22,7 +22,8 @@ app.layout = html.Div([dcc.Interval(id='interval1', interval=1 * 500, n_interval
                                              style={"width":"200px", "height":"100px", "text-align":"center",
                                                     "background-color": "#e7e7e7", "font-size": "30px",
                                                     "border":"2px solid #4CAF50"})],
-                                style={"position":"relative",'width': '98%', "height":"100px", "text-align":"center"})],
+                                style={"position":"relative", 'display': 'inline-block',
+                                       'width': '68%', "height":"100px", "text-align":"center"})],
                       style={"margin":"auto", "text-align":"center"}
                       )
 
@@ -81,9 +82,11 @@ def update_interval(n, clicks):
             return 'White time passed : ' + convertTimeToString(whiteRemainTime), \
                    'Black time passed : ' + convertTimeToString(blackRemainTime)
 
+
 if __name__ == '__main__':
-    whiteRemainTime = 90 * 60
-    blackRemainTime = 90 * 60
+    period = 5 * 60
+    whiteRemainTime = period
+    blackRemainTime = period
     startTime = 0
     totalClicks = 0
     WorB = -1
